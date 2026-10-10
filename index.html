@@ -1,172 +1,135 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Morflor: ropa y complementos.">
-<title>Morflor — Ropa con alma natural</title>
-<style>
-:root{--cream:#f8f6f0;--paper:#fffdf9;--green:#405443;--green2:#637563;--ink:#252a25;--muted:#70766e;--line:#e6e2d9;--pink:#ead4ce}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
-header{position:sticky;top:0;z-index:10;background:#fbfaf6ee;backdrop-filter:blur(12px);border-bottom:1px solid #e8e4dc}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font:32px Georgia,serif;color:var(--green);display:flex;align-items:center;gap:10px}.brand-mark{font-size:30px}.links{display:flex;gap:28px;font-size:13px}.links a:hover{color:var(--green2)}.menu{display:none;border:0;background:none;font-size:25px;color:var(--green)}.lang-select{border:1px solid var(--line);border-radius:999px;padding:7px 10px;background:var(--paper);color:var(--green);font-size:12px;cursor:pointer}
-.hero{min-height:400px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:28px;padding:44px 0}.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:11px;color:var(--green2);font-weight:bold}.hero h1{font:clamp(54px,7vw,88px)/.98 Georgia,serif;letter-spacing:-3px;margin:12px 0 20px}.hero p{max-width:390px;color:#555b54;font:18px/1.5 Georgia,serif}.hero-art{height:320px;border-radius:48% 48% 10px 10px;overflow:hidden;background:linear-gradient(135deg,#eee6dc,#d6d8c9);position:relative;display:grid;place-items:center}.hero-art img{width:100%;height:100%;object-fit:cover}.hero-art .placeholder{font-size:110px;filter:drop-shadow(0 12px 12px #71664b30)}
-.btn{border:0;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:white;border-radius:999px;padding:13px 22px;font-weight:600;font-size:13px;cursor:pointer;transition:transform .2s,background .2s}.btn:hover{background:#2e4132;transform:translateY(-1px)}.btn.secondary{background:transparent;color:var(--green);border:1px solid #aeb8ac}
-section{padding:60px 0}.section-head{text-align:center;margin-bottom:28px}.section-head h2,.section-title{font:36px Georgia,serif;color:#34463a;margin:0}.rule{width:38px;height:2px;background:#899985;margin:14px auto}.section-head p,.subtle{color:var(--muted);font-size:14px}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.product{background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 4px 18px #303c2810}.product-art{height:190px;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#e6ddd0,#f1eae1)}.product-art img{width:100%;height:100%;object-fit:cover}.product-art span{font-size:70px}.product-info{padding:16px}.product h3{font:21px Georgia,serif;margin:0 0 5px}.product p{font-size:12px;color:var(--muted);min-height:38px;margin:0 0 14px}.product-bottom{display:flex;align-items:center;justify-content:space-between}.price{font-weight:bold;font-size:14px}.season{background:#eeeee6}.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.location-grid .section-title{margin-bottom:10px}.hours{display:flex;gap:14px;margin:22px 0}.hours-icon{font-size:24px;color:var(--green)}.stops{display:grid;gap:14px;margin:20px 0}.stop{padding:14px 16px;border:1px solid #dcded4;border-radius:10px;background:#f8f8f2}.stop strong{display:block;color:var(--green);font-size:14px}.stop span{display:block;color:var(--muted);font-size:13px;margin-top:3px}.map-card{min-height:310px;border-radius:16px;background:linear-gradient(35deg,#dfe6d9,#f7f3e9);border:1px solid #d8ddd2;padding:22px;display:flex;flex-direction:column;justify-content:center;gap:14px;position:relative;overflow:hidden}.map-card:before{content:"";position:absolute;inset:-40px;background:repeating-linear-gradient(35deg,transparent 0 34px,#ffffff90 35px 39px),repeating-linear-gradient(125deg,transparent 0 52px,#c4d2bf 53px 57px);opacity:.65}.map-label{position:relative;background:#fffdf8eF;padding:13px;border-radius:8px;max-width:260px;box-shadow:0 4px 15px #0000000c}.map-label b{display:block;font-size:13px}.map-label small{color:var(--muted)}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px}.contact-details{display:grid;gap:16px;margin-top:28px}.detail{display:flex;gap:12px;align-items:flex-start}.detail .icon{font-size:22px;color:var(--green)}.detail small{display:block;color:var(--muted)}form{display:grid;gap:12px}form h3{font-size:17px;margin:0 0 4px}input,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:8px;background:var(--paper);outline:none}input:focus,textarea:focus{border-color:#829580}textarea{min-height:120px;resize:vertical}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form-note{font-size:12px;color:var(--muted);margin:0}footer{background:#34463a;color:#f8f6f0;padding:28px 0}.foot{display:flex;align-items:center;justify-content:space-between;gap:20px}.foot .brand{color:#f8f6f0;font-size:27px}.foot small{color:#d5ddd2}
-@media(max-width:800px){.links{gap:14px;font-size:12px}.products{grid-template-columns:repeat(2,1fr)}.location-grid,.contact-grid{grid-template-columns:1fr;gap:28px}.hero-art{height:270px}.hero{min-height:auto}.section-title,.section-head h2{font-size:31px}}
-@media(max-width:560px){.wrap{width:min(100% - 28px,1120px)}.nav{height:66px}.brand{font-size:27px}.menu{display:block}.links{display:none;position:absolute;left:0;right:0;top:65px;background:var(--paper);padding:18px 24px;flex-direction:column;border-bottom:1px solid var(--line)}.links.open{display:flex}.hero{grid-template-columns:1fr;padding:36px 0}.hero h1{font-size:64px}.hero-art{height:250px;grid-row:1}.products{gap:12px}.product-art{height:145px}.product-info{padding:12px}.product h3{font-size:18px}.product p{min-height:54px}.two{grid-template-columns:1fr}.foot{align-items:flex-start;flex-direction:column}.foot nav{display:flex;gap:16px;flex-wrap:wrap}section{padding:44px 0}} 
-.brand-mark {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    width: 42px !important;
-    height: 42px !important;
-    min-width: 42px;
-    flex-shrink: 0;
-    overflow: hidden;
-    border-radius: 50%;
-    background: #fff;
-}
-
-.brand-mark img {
-    display: block;
-    width: 100% !important;
-    height: 100% !important;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    position: static;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gitVisualise - Turn Any GitHub Repository into an Interactive Architecture Tour</title>
+    <meta name="description" content="Paste a GitHub link, get an instant narrated architecture tour. Runs in your browser with zero dependencies. Available as website, CLI, Claude Code skill, and GitHub Action. Free and open source.">
+    <meta name="keywords" content="architecture,architecture-diagram,claude-code,code-visualization,dependency-graph,developer-tools,documentation,github-action,github-pages,good-first-issue,hacktoberfest,javascript,nodejs,onboarding,open-source,repo-visualizer,static-analysis,visualization">
+    <meta name="author" content="Momen23344">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="gitVisualise - Turn Any GitHub Repository into an Interactive Architecture Tour">
+    <meta property="og:description" content="Paste a GitHub link, get an instant narrated architecture tour. Runs in your browser with zero dependencies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Momen23344/gitVisualise">
+    <meta property="og:image" content="https://github.com/Momen23344/gitVisualise/raw/main/assets/hero.png">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
-<body>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#inicio" aria-label="Morflor, inicio"><span class="brand-mark"><img src="images/morflor_logo.png"></span> Morflor</a>
-    <button class="menu" id="menuBtn" aria-label="Abrir menú">☰</button> 
-    <nav class="links" id="navLinks"><a href="#inicio" data-i18n="navHome">Inicio</a><a href="#tienda" data-i18n="navShop">Tienda</a><a href="#paradas" data-i18n="navStops">Horario y paradas</a><a href="#contacto" data-i18n="navContact">Contacto</a><select class="lang-select" id="languageSelect" aria-label="Seleccionar idioma"><option value="es">ES</option><option value="ca">CA</option><option value="en">EN</option></select></nav>
-  </div>
-</header>
-<main>
-<section class="wrap hero" id="inicio">
-  <div><div class="eyebrow" data-i18n="eyebrow">Ropa con alma natural</div><h1>Morflor</h1><p data-i18n="heroText">Ropa cómoda, versátil y atemporal para acompañarte cada día.</p><a class="btn" href="#tienda"><span data-i18n="viewCatalog">Ver catálogo</span> <span>→</span></a></div>
-  <div class="hero-art"><img src="images/486540069_1085104243614338_6165540528352169906_n.jpg" alt="Moda casual y prendas de temporada" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<span class=placeholder>💐</span>')"></div>
-</section>
-<section id="tienda">
-  <div class="wrap"><div class="section-head"><h2>Colección de temporada</h2><div class="rule"></div><p data-i18n="catalogText">Descubre prendas esenciales para cada momento.</p></div>
-  <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:0 0 30px">
-    <a class="btn secondary" href="#tienda">Mujer</a><a class="btn secondary" href="#tienda">Cinturones</a><a class="btn secondary" href="#tienda">Bolsos</a><a class="btn secondary" href="#tienda">Accesorios</a>
-  </div>
-  <div class="products" id="products"></div></div>
-</section>
-<section class="season" id="paradas">
-  <div class="wrap location-grid">
-    <div><h2 class="section-title" data-i18n="stopsTitle">Horario y paradas</h2><div class="rule" style="margin-left:0"></div><p class="subtle" data-i18n="stopsIntro">Consulta dónde estaremos y ven a descubrir tu próxima prenda favorita.</p>
-      <div class="hours"><span class="hours-icon">◷</span><div><b data-i18n="openingHours">Horario de atención</b><p class="subtle" style="margin:4px 0"><span data-i18n="hoursPlaceholder">Lunes a sábado: [añadir horario]<br>Domingo: [añadir horario o cerrado]</span></p></div></div>
-      <h3 style="font:23px Georgia,serif;color:var(--green)" data-i18n="ourStops">Nuestras paradas</h3>
-      <div class="stops">
-        <div class="stop"><strong>📍 Parada 1 — [Nombre del lugar]</strong><span>[Dirección completa] · [Días y horas]</span><a class="subtle" href="https://maps.google.com/" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div>
-        <div class="stop"><strong>📍 Parada 2 — [Nombre del lugar]</strong><span>[Dirección completa] · [Días y horas]</span><a class="subtle" href="https://maps.google.com/" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div>
-        <div class="stop"><strong>📍 Parada 3 — [Nombre del lugar]</strong><span>[Dirección completa] · [Días y horas]</span><a class="subtle" href="https://maps.google.com/" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div>
-          <div class="stop"><strong>📍 Parada 4 — [Nombre del lugar]</strong><span>[Dirección completa] · [Días y horas]</span><a class="subtle" href="https://maps.google.com/" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div>
-      </div>
+<body style="margin:0; padding:0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color:#f8f9fa; color:#333; line-height:1.6;">
+
+    <div style="max-width:1100px; margin:0 auto; padding:20px;">
+
+        <!-- Hero Section -->
+        <div style="background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius:16px; padding:50px 40px; text-align:center; color:white; box-shadow:0 10px 30px rgba(0,0,0,0.2); margin-top:30px;">
+            <h1 style="font-size:3em; margin:0 0 10px 0; font-weight:800; letter-spacing:-1px;">🔍 gitVisualise - See Any Codebase Come Alive</h1>
+            <p style="font-size:1.3em; opacity:0.95; max-width:700px; margin:20px auto;">Paste any GitHub link and instantly get a narrated, interactive tour of the project's architecture. No setup, no downloads, no programming knowledge needed.</p>
+            <a href="https://github.com/Momen23344/gitVisualise/releases" style="display:inline-block; background:#ff6b6b; color:white; padding:18px 40px; border-radius:50px; text-decoration:none; font-size:1.2em; font-weight:bold; box-shadow:0 5px 15px rgba(0,0,0,0.3); margin-top:20px; transition:transform 0.2s;">⬇️ Download gitVisualise Now</a>
+            <p style="font-size:0.9em; margin-top:15px; opacity:0.8;">Free • Open Source • Runs in your browser</p>
+        </div>
+
+        <!-- What is gitVisualise -->
+        <div style="background:white; border-radius:12px; padding:40px; margin-top:40px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            <h2 style="color:#667eea; font-size:2em; border-bottom:3px solid #667eea; padding-bottom:10px;">🤔 What is gitVisualise?</h2>
+            <p style="font-size:1.1em;">Have you ever opened a GitHub repository and felt completely lost? You see files and folders, but you have no idea how they connect or what they do. That's where gitVisualise comes in.</p>
+            <p style="font-size:1.1em;">Think of it as a tour guide for code. You simply paste a GitHub link into gitVisualise, and it creates a beautiful, interactive map of the entire project. It shows you how the different parts connect, what each file does, and even narrates the journey for you. It's like having an experienced developer walk you through the codebase, step by step.</p>
+            <p style="font-size:1.1em;">Whether you're a student trying to understand open-source projects, a manager wanting to see what your team is building, or a curious learner, gitVisualise makes code accessible to everyone.</p>
+        </div>
+
+        <!-- Key Features -->
+        <div style="background:white; border-radius:12px; padding:40px; margin-top:30px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            <h2 style="color:#667eea; font-size:2em; border-bottom:3px solid #667eea; padding-bottom:10px;">✨ Amazing Features</h2>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:25px; margin-top:25px;">
+                <div style="background:#f8f9fa; padding:25px; border-radius:10px;">
+                    <h3 style="color:#764ba2; margin-top:0;">🎯 Instant Architecture Tours</h3>
+                    <p>Paste any GitHub URL and watch as gitVisualise transforms the code into a visual story. See the big picture in seconds, not hours.</p>
+                </div>
+                <div style="background:#f8f9fa; padding:25px; border-radius:10px;">
+                    <h3 style="color:#764ba2; margin-top:0;">🗣️ Narrated Walkthroughs</h3>
+                    <p>Every tour comes with a clear, human-friendly narration. Understand what each part does without reading a single line of code.</p>
+                </div>
+                <div style="background:#f8f9fa; padding:25px; border-radius:10px;">
+                    <h3 style="color:#764ba2; margin-top:0;">🌐 Works Everywhere</h3>
+                    <p>Use it as a website, a command-line tool, a Claude Code skill, or a GitHub Action. It's available wherever you need it.</p>
+                </div>
+                <div style="background:#f8f9fa; padding:25px; border-radius:10px;">
+                    <h3 style="color:#764ba2; margin-top:0;">🚫 Zero Dependencies</h3>
+                    <p>No installations, no plugins, no complicated setup. Everything runs directly in your web browser. It just works.</p>
+                </div>
+                <div style="background:#f8f9fa; padding:25px; border-radius:10px;">
+                    <h3 style="color:#764ba2; margin-top:0;">📊 Visual Dependency Graphs</h3>
+                    <p>See how different parts of the project connect. Understand the relationships between files and modules at a glance.</p>
+                </div>
+                <div style="background:#f8f9fa; padding:25px; border-radius:10px;">
+                    <h3 style="color:#764ba2; margin-top:0;">🤝 Built for Contributors</h3>
+                    <p>Perfect for open-source projects. New contributors can understand the codebase in minutes, not weeks. Great for onboarding!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Download and Run -->
+        <div style="background:white; border-radius:12px; padding:40px; margin-top:30px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            <h2 style="color:#667eea; font-size:2em; border-bottom:3px solid #667eea; padding-bottom:10px;">🚀 Getting Started - Download and Run</h2>
+            <p style="font-size:1.1em;">Getting started with gitVisualise is incredibly easy. Follow these simple steps:</p>
+            <div style="background:#f0f4ff; border-left:5px solid #667eea; padding:25px; margin:20px 0; border-radius:8px;">
+                <h3 style="color:#764ba2; margin-top:0;">Step 1: Download the Application</h3>
+                <p style="font-size:1.1em;">Visit this link to download the application. It's completely free and safe.</p>
+                <a href="https://github.com/Momen23344/gitVisualise/releases" style="display:inline-block; background:#667eea; color:white; padding:15px 35px; border-radius:50px; text-decoration:none; font-size:1.1em; font-weight:bold; box-shadow:0 4px 10px rgba(102,126,234,0.4);">📥 Visit Download Page</a>
+            </div>
+            <div style="background:#f0f4ff; border-left:5px solid #667eea; padding:25px; margin:20px 0; border-radius:8px;">
+                <h3 style="color:#764ba2; margin-top:0;">Step 2: Use gitVisualise</h3>
+                <p style="font-size:1.1em;">Once you have the application, simply open it. You'll see a simple box where you can paste any GitHub repository link. Hit the "Visualize" button, and within moments, your interactive architecture tour will appear. That's it!</p>
+            </div>
+            <p style="font-size:1.1em; margin-top:25px;">No technical skills required. No command line. No complicated settings. If you can copy and paste a link, you can use gitVisualise.</p>
+        </div>
+
+        <!-- Use Cases -->
+        <div style="background:white; border-radius:12px; padding:40px; margin-top:30px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            <h2 style="color:#667eea; font-size:2em; border-bottom:3px solid #667eea; padding-bottom:10px;">💡 Who Should Use gitVisualise?</h2>
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; margin-top:20px;">
+                <div style="background:#f8f9fa; padding:20px; border-radius:8px; text-align:center;">
+                    <div style="font-size:2.5em;">🎓</div>
+                    <h3 style="color:#764ba2;">Students</h3>
+                    <p>Learn from real-world codebases. Understand how professional projects are structured.</p>
+                </div>
+                <div style="background:#f8f9fa; padding:20px; border-radius:8px; text-align:center;">
+                    <div style="font-size:2.5em;">👔</div>
+                    <h3 style="color:#764ba2;">Managers</h3>
+                    <p>Get a clear picture of what your team is building without needing to read code.</p>
+                </div>
+                <div style="background:#f8f9fa; padding:20px; border-radius:8px; text-align:center;">
+                    <div style="font-size:2.5em;">🧑‍💻</div>
+                    <h3 style="color:#764ba2;">New Developers</h3>
+                    <p>Get up to speed on any project quickly. Perfect for onboarding and code reviews.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose -->
+        <div style="background:white; border-radius:12px; padding:40px; margin-top:30px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+            <h2 style="color:#667eea; font-size:2em; border-bottom:3px solid #667eea; padding-bottom:10px;">🌟 Why Choose gitVisualise?</h2>
+            <ul style="font-size:1.1em; list-style-type:none; padding:0;">
+                <li style="padding:10px 0; border-bottom:1px solid #eee;">✅ <strong>100% Free and Open Source</strong> - No hidden costs, ever. Contribute if you'd like!</li>
+                <li style="padding:10px 0; border-bottom:1px solid #eee;">✅ <strong>Privacy-First</strong> - Everything runs in your browser. Your code never leaves your computer.</li>
+                <li style="padding:10px 0; border-bottom:1px solid #eee;">✅ <strong>Works with Any GitHub Repository</strong> - From tiny projects to massive enterprise codebases.</li>
+                <li style="padding:10px 0; border-bottom:1px solid #eee;">✅ <strong>Continuously Improved</strong> - Active development with new features added regularly.</li>
+                <li style="padding:10px 0;">✅ <strong>Community-Driven</strong> - Built by developers, for developers. We welcome contributions!</li>
+            </ul>
+        </div>
+
+        <!-- Community -->
+        <div style="background:linear-gradient(135deg, #764ba2 0%, #667eea 100%); border-radius:12px; padding:40px; margin-top:30px; color:white; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
+            <h2 style="font-size:2em; margin-top:0;">🤝 Join Our Community</h2>
+            <p style="font-size:1.2em;">gitVisualise is proudly open source. Whether you want to contribute code, report a bug, or suggest a feature, we'd love to hear from you!</p>
+            <p style="font-size:1.1em;">We welcome contributors of all skill levels. Look for issues labeled "good first issue" to get started easily.</p>
+            <a href="https://github.com/Momen23344/gitVisualise" style="display:inline-block; background:#ff6b6b; color:white; padding:15px 35px; border-radius:50px; text-decoration:none; font-size:1.1em; font-weight:bold; margin-top:15px; box-shadow:0 4px 10px rgba(0,0,0,0.3);">⭐ Star us on GitHub</a>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align:center; padding:30px 0; color:#666; font-size:0.9em;">
+            <p>© 2024 gitVisualise. Made with ❤️ for the developer community.</p>
+            <p>Keywords: architecture, architecture-diagram, claude-code, code-visualization, dependency-graph, developer-tools, documentation, github-action, github-pages, good-first-issue, hacktoberfest, javascript, nodejs, onboarding, open-source, repo-visualizer, static-analysis, visualization</p>
+        </div>
+
     </div>
-    <div class="map-card" aria-label="Vista ilustrativa de ubicaciones"><div class="map-label"><b>📍 Parada 1</b><small>Añade aquí la dirección real</small></div><div class="map-label" style="margin-left:24%"><b>📍 Parada 2</b><small>Añade aquí la dirección real</small></div><div class="map-label" style="margin-left:20%"><b>📍 Parada 3</b><small>Añade aquí la dirección real</small></div><div class="map-label"><b>📍 Parada 1</b><small>Añade aquí la dirección real</small></div></div>
-  </div>
-</section>
-<section id="contacto">
-  <div class="wrap contact-grid">
-    <div><h2 class="section-title" data-i18n="contactTitle">Encuentra tu estilo</h2><div class="rule" style="margin-left:0"></div><p class="subtle" data-i18n="contactIntro">¿Tienes alguna duda sobre tallas o disponibilidad? Escríbenos, estaremos encantados de ayudarte.</p>
-      <div class="contact-details">
-        <div class="detail"><span class="icon">☎</span><div><b data-i18n="phone">Teléfono</b><small><a href="tel:+34600806966">600 80 69 66</a></small></div></div>
-        <div class="detail"><span class="icon">✉</span><div><b data-i18n="email">Correo electrónico</b><small><a href="mailto:hola@morflor.example">email</a></small></div></div>
-          <div class="detail"><span class="icon">ⓕ</span><div><b data-i18n="email">Facebook</b><small><a href="https://www.facebook.com/p/Morflor-100063443185277/</a></small><div></div>
-      </div>
-    </div>
-    <form id="contactForm"><h3 data-i18n="sendMessage">Envíanos un mensaje</h3>
-      <div class="two"><input id="name" name="name" placeholder="Nombre completo" data-i18n-placeholder="namePlaceholder" required><input id="email" name="email" type="email" placeholder="Correo electrónico" data-i18n-placeholder="emailPlaceholder" required></div>
-      <input id="subject" name="subject" placeholder="Asunto (opcional)" data-i18n-placeholder="subjectPlaceholder">
-      <textarea id="message" name="message" placeholder="Cuéntanos qué necesitas..." data-i18n-placeholder="messagePlaceholder" required></textarea>
-      <button class="btn" type="submit"><span data-i18n="prepareEmail">Preparar mensaje por correo</span> →</button>
-    </form>
-  </div>
-</section>
-</main>
-<footer><div class="wrap foot"><div><a class="brand" href="#inicio"><span></span> Morflor</a><br><small data-i18n="tagline">Ropa que te acompaña.</small></div><nav><a href="#inicio" data-i18n="navHome">Inicio</a>　<a href="#tienda" data-i18n="navShop">Tienda</a>　<a href="#paradas" data-i18n="footerLocations">Ubicaciones</a>　<a href="#contacto" data-i18n="navContact">Contacto</a></nav><small>© <span id="year"></span> Morflor</small></div></footer>
-<div class="toast" id="toast" role="status"></div>
-<script>
-const translations = {
- es: {
-  navHome:"Inicio",navShop:"Tienda",navStops:"Horario y paradas",navContact:"Contacto",
-  eyebrow:"Ropa con alma natural",heroText:"Ropa cómoda, versátil y atemporal para acompañarte cada día.",viewCatalog:"Ver catálogo",
-  seasonCatalog:"Catálogo de temporada",catalogText:"Descubre prendas esenciales para cada momento.",
-  stopsTitle:"Horario y paradas",stopsIntro:"Consulta dónde estaremos y ven a descubrir tu próxima prenda favorita.",
-  openingHours:"Horario de atención",hoursPlaceholder:"Lunes a sábado: [añadir horario]<br>Domingo: [añadir horario o cerrado]",
-  ourStops:"Nuestras paradas",contactTitle:"Encuentra tu estilo",contactIntro:"¿Tienes alguna duda sobre tallas o disponibilidad? Escríbenos, estaremos encantados de ayudarte.",
-  phone:"Teléfono",email:"Correo electrónico",sendMessage:"Envíanos un mensaje",namePlaceholder:"Nombre completo",emailPlaceholder:"Correo electrónico",
-  subjectPlaceholder:"Asunto (opcional)",messagePlaceholder:"Cuéntanos qué necesitas...",prepareEmail:"Preparar mensaje por correo",
-  formNote:"El botón abrirá tu aplicación de correo con el mensaje preparado. Sustituye el correo de ejemplo por el correo real de Morflor.",
-  tagline:"Ropa que te acompaña.",footerLocations:"Ubicaciones",add:"Añadir",added:"añadido a la cesta",emptyCart:"Tu cesta está vacía",
-  cart:"Cesta",askOrder:"¿Quieres preparar un pedido por correo?",orderTitle:"Pedido web Morflor",name:"Nombre",mail:"Correo",
-  total:"Total orientativo",orderIntro:"Hola Morflor,\nMe gustaría consultar este pedido:",yourDetails:"Mi nombre y disponibilidad:",
-  subjectDefault:"Consulta desde la web",map:"Abrir en Google Maps ↗"
- },
- ca: {
-  navHome:"Inici",navShop:"Botiga",navStops:"Horaris i parades",navContact:"Contacte",
-  eyebrow:"Roba amb ànima natural",heroText:"Roba còmoda, versàtil i atemporal per acompanyar-te cada dia.",viewCatalog:"Veure catàleg",
-  seasonCatalog:"Catàleg de temporada",catalogText:"Descobreix peces essencials per a cada moment.",
-  stopsTitle:"Horaris i parades",stopsIntro:"Consulta on serem i vine a descobrir la teva pròxima peça preferida.",
-  openingHours:"Horari d'atenció",hoursPlaceholder:"De dilluns a dissabte: [afegeix l'horari]<br>Diumenge: [afegeix l'horari o tancat]",
-  ourStops:"Les nostres parades",contactTitle:"Troba el teu estil",contactIntro:"Tens dubtes sobre talles o disponibilitat? Escriu-nos, estarem encantats d'ajudar-te.",
-  phone:"Telèfon",email:"Correu electrònic",sendMessage:"Envia'ns un missatge",namePlaceholder:"Nom complet",emailPlaceholder:"Correu electrònic",
-  subjectPlaceholder:"Assumpte (opcional)",messagePlaceholder:"Explica'ns què necessites...",prepareEmail:"Preparar missatge per correu",
-  formNote:"El botó obrirà la teva aplicació de correu amb el missatge preparat. Canvia el correu d'exemple pel correu real de Morflor.",
-  tagline:"Roba que t'acompanya.",footerLocations:"Ubicacions",add:"Afegir",added:"afegit a la cistella",emptyCart:"La cistella és buida",
-  cart:"Cistella",askOrder:"Vols preparar una comanda per correu?",orderTitle:"Comanda web Morflor",name:"Nom",mail:"Correu",
-  total:"Total orientatiu",orderIntro:"Hola Morflor,\nM'agradaria consultar aquesta comanda:",yourDetails:"El meu nom i disponibilitat:",
-  subjectDefault:"Consulta des del web",map:"Obrir a Google Maps ↗"
- },
- en: {
-  navHome:"Home",navShop:"Shop",navStops:"Hours & locations",navContact:"Contact",
-  eyebrow:"Clothing with a natural soul",heroText:"Comfortable, versatile and timeless clothing for every day.",viewCatalog:"View collection",
-  seasonCatalog:"Seasonal collection",catalogText:"Discover wardrobe essentials for every occasion.",
-  stopsTitle:"Hours & locations",stopsIntro:"See where we'll be and stop by to discover your next favourite piece.",
-  openingHours:"Opening hours",hoursPlaceholder:"Monday to Saturday: [add hours]<br>Sunday: [add hours or closed]",
-  ourStops:"Our stops",contactTitle:"Find your style",contactIntro:"Questions about sizes or availability? Send us a message — we're happy to help.",
-  phone:"Phone",email:"Email",sendMessage:"Send us a message",namePlaceholder:"Full name",emailPlaceholder:"Email address",
-  subjectPlaceholder:"Subject (optional)",messagePlaceholder:"Tell us what you need...",prepareEmail:"Prepare email",
-  formNote:"This button opens your email app with the message prepared. Replace the example email with Morflor's real email address.",
-  tagline:"Clothing that goes with you.",footerLocations:"Locations",add:"Add",added:"added to your basket",emptyCart:"Your basket is empty",
-  cart:"Basket",askOrder:"Would you like to prepare an order by email?",orderTitle:"Morflor website order",name:"Name",mail:"Email",
-  total:"Estimated total",orderIntro:"Hello Morflor,\nI'd like to enquire about this order:",yourDetails:"My name and availability:",
-  subjectDefault:"Website enquiry",map:"Open in Google Maps ↗"
- }
-};
-function applyLanguage(lang) {
- const t = translations[lang] || translations.es;
- document.documentElement.lang = lang;
- document.querySelectorAll("[data-i18n]").forEach(el => {
-   const key = el.getAttribute("data-i18n");
-   if (t[key]) el.innerHTML = t[key];
- });
- document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
-   const key = el.getAttribute("data-i18n-placeholder");
-   if (t[key]) el.placeholder = t[key];
- });
- window.currentLang = lang;
-}
-document.getElementById("languageSelect").addEventListener("change", e => applyLanguage(e.target.value));
-window.currentLang = "es";
-const catalogo=[
- {nombre:"Jersey Oversize",desc:"Punto suave para un look relajado.",precio:29.90,emoji:"🧥",foto:"https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=700&q=80"},
- {nombre:"Chaqueta Ligera",desc:"Una capa versátil para cada día.",precio:49.90,emoji:"🧥",foto:"https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=80"},
- {nombre:"Pantalón Wide Leg",desc:"Corte cómodo y estilo atemporal.",precio:34.90,emoji:"👖",foto:"https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=700&q=80"},
- {nombre:"Jersey de Rayas",desc:"Un básico fácil de combinar.",precio:27.90,emoji:"👕",foto:"https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=700&q=80"}
-];
-const products=document.getElementById('products');
-catalogo.forEach((p,i)=>{const card=document.createElement('article');card.className='product';card.innerHTML=`<div class="product-art"><img src="${p.foto}" alt="${p.nombre}" onerror="this.remove();this.parentElement.insertAdjacentHTML('beforeend','<span>${p.emoji}</span>')"></div><div class="product-info"><h3>${p.nombre}</h3><p>${p.desc}</p><div class="product-bottom"><span class="price">${p.precio.toFixed(2).replace('.',',')} €</span></div></div>`;products.appendChild(card)});
-document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('name').value.trim(),email=document.getElementById('email').value.trim(),subject=document.getElementById('subject').value.trim()||'Consulta desde la web Morflor',message=document.getElementById('message').value.trim();const body=`Nombre: ${name}\nCorreo: ${email}\n\n${message}`;location.href='mailto:CAMBIAR-POR-CORREO-REAL?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body)});
-document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));document.getElementById('year').textContent=new Date().getFullYear();applyLanguage('es');
-</script>
-</body></html>
+</body>
+</html>
