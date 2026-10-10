@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Morflor: flores frescas, ramos y arreglos de temporada.">
+<meta name="description" content="Morflor: ropa y complementos.">
 <title>Morflor — Ropa con alma natural</title>
 <style>
 :root{--cream:#f8f6f0;--paper:#fffdf9;--green:#405443;--green2:#637563;--ink:#252a25;--muted:#70766e;--line:#e6e2d9;--pink:#ead4ce}
@@ -14,14 +14,37 @@ header{position:sticky;top:0;z-index:10;background:#fbfaf6ee;backdrop-filter:blu
 .btn{border:0;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:white;border-radius:999px;padding:13px 22px;font-weight:600;font-size:13px;cursor:pointer;transition:transform .2s,background .2s}.btn:hover{background:#2e4132;transform:translateY(-1px)}.btn.secondary{background:transparent;color:var(--green);border:1px solid #aeb8ac}
 section{padding:60px 0}.section-head{text-align:center;margin-bottom:28px}.section-head h2,.section-title{font:36px Georgia,serif;color:#34463a;margin:0}.rule{width:38px;height:2px;background:#899985;margin:14px auto}.section-head p,.subtle{color:var(--muted);font-size:14px}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.product{background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 4px 18px #303c2810}.product-art{height:190px;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#e6ddd0,#f1eae1)}.product-art img{width:100%;height:100%;object-fit:cover}.product-art span{font-size:70px}.product-info{padding:16px}.product h3{font:21px Georgia,serif;margin:0 0 5px}.product p{font-size:12px;color:var(--muted);min-height:38px;margin:0 0 14px}.product-bottom{display:flex;align-items:center;justify-content:space-between}.price{font-weight:bold;font-size:14px}.season{background:#eeeee6}.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.location-grid .section-title{margin-bottom:10px}.hours{display:flex;gap:14px;margin:22px 0}.hours-icon{font-size:24px;color:var(--green)}.stops{display:grid;gap:14px;margin:20px 0}.stop{padding:14px 16px;border:1px solid #dcded4;border-radius:10px;background:#f8f8f2}.stop strong{display:block;color:var(--green);font-size:14px}.stop span{display:block;color:var(--muted);font-size:13px;margin-top:3px}.map-card{min-height:310px;border-radius:16px;background:linear-gradient(35deg,#dfe6d9,#f7f3e9);border:1px solid #d8ddd2;padding:22px;display:flex;flex-direction:column;justify-content:center;gap:14px;position:relative;overflow:hidden}.map-card:before{content:"";position:absolute;inset:-40px;background:repeating-linear-gradient(35deg,transparent 0 34px,#ffffff90 35px 39px),repeating-linear-gradient(125deg,transparent 0 52px,#c4d2bf 53px 57px);opacity:.65}.map-label{position:relative;background:#fffdf8eF;padding:13px;border-radius:8px;max-width:260px;box-shadow:0 4px 15px #0000000c}.map-label b{display:block;font-size:13px}.map-label small{color:var(--muted)}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px}.contact-details{display:grid;gap:16px;margin-top:28px}.detail{display:flex;gap:12px;align-items:flex-start}.detail .icon{font-size:22px;color:var(--green)}.detail small{display:block;color:var(--muted)}form{display:grid;gap:12px}form h3{font-size:17px;margin:0 0 4px}input,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:8px;background:var(--paper);outline:none}input:focus,textarea:focus{border-color:#829580}textarea{min-height:120px;resize:vertical}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form-note{font-size:12px;color:var(--muted);margin:0}footer{background:#34463a;color:#f8f6f0;padding:28px 0}.foot{display:flex;align-items:center;justify-content:space-between;gap:20px}.foot .brand{color:#f8f6f0;font-size:27px}.foot small{color:#d5ddd2}
 @media(max-width:800px){.links{gap:14px;font-size:12px}.products{grid-template-columns:repeat(2,1fr)}.location-grid,.contact-grid{grid-template-columns:1fr;gap:28px}.hero-art{height:270px}.hero{min-height:auto}.section-title,.section-head h2{font-size:31px}}
-@media(max-width:560px){.wrap{width:min(100% - 28px,1120px)}.nav{height:66px}.brand{font-size:27px}.menu{display:block}.links{display:none;position:absolute;left:0;right:0;top:65px;background:var(--paper);padding:18px 24px;flex-direction:column;border-bottom:1px solid var(--line)}.links.open{display:flex}.hero{grid-template-columns:1fr;padding:36px 0}.hero h1{font-size:64px}.hero-art{height:250px;grid-row:1}.products{gap:12px}.product-art{height:145px}.product-info{padding:12px}.product h3{font-size:18px}.product p{min-height:54px}.two{grid-template-columns:1fr}.foot{align-items:flex-start;flex-direction:column}.foot nav{display:flex;gap:16px;flex-wrap:wrap}section{padding:44px 0}}
+@media(max-width:560px){.wrap{width:min(100% - 28px,1120px)}.nav{height:66px}.brand{font-size:27px}.menu{display:block}.links{display:none;position:absolute;left:0;right:0;top:65px;background:var(--paper);padding:18px 24px;flex-direction:column;border-bottom:1px solid var(--line)}.links.open{display:flex}.hero{grid-template-columns:1fr;padding:36px 0}.hero h1{font-size:64px}.hero-art{height:250px;grid-row:1}.products{gap:12px}.product-art{height:145px}.product-info{padding:12px}.product h3{font-size:18px}.product p{min-height:54px}.two{grid-template-columns:1fr}.foot{align-items:flex-start;flex-direction:column}.foot nav{display:flex;gap:16px;flex-wrap:wrap}section{padding:44px 0}} 
+.brand-mark {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.brand-mark img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    position: static;
+}
+
 </style>
 </head>
 <body>
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#inicio" aria-label="Morflor, inicio"><span class="brand-mark">❧</span> Morflor</a>
-    <button class="menu" id="menuBtn" aria-label="Abrir menú">☰</button>
+    <a class="brand" href="#inicio" aria-label="Morflor, inicio"><span class="brand-mark"><img src="img/morflor_logo.png"></span> Morflor</a>
+    <button class="menu" id="menuBtn" aria-label="Abrir menú">☰</button> 
     <nav class="links" id="navLinks"><a href="#inicio" data-i18n="navHome">Inicio</a><a href="#tienda" data-i18n="navShop">Tienda</a><a href="#paradas" data-i18n="navStops">Horario y paradas</a><a href="#contacto" data-i18n="navContact">Contacto</a><select class="lang-select" id="languageSelect" aria-label="Seleccionar idioma"><option value="es">ES</option><option value="ca">CA</option><option value="en">EN</option></select></nav>
   </div>
 </header>
@@ -46,17 +69,18 @@ section{padding:60px 0}.section-head{text-align:center;margin-bottom:28px}.secti
         <div class="stop"><strong>📍 Parada 1 — [Nombre del lugar]</strong><span>[Dirección completa] · [Días y horas]</span><a class="subtle" href="https://maps.google.com/" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div>
         <div class="stop"><strong>📍 Parada 2 — [Nombre del lugar]</strong><span>[Dirección completa] · [Días y horas]</span><a class="subtle" href="https://maps.google.com/" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div>
         <div class="stop"><strong>📍 Parada 3 — [Nombre del lugar]</strong><span>[Dirección completa] · [Días y horas]</span><a class="subtle" href="https://maps.google.com/" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div>
+          <div class="stop"><strong>📍 Parada 4 — [Nombre del lugar]</strong><span>[Dirección completa] · [Días y horas]</span><a class="subtle" href="https://maps.google.com/" target="_blank" rel="noopener">Abrir en Google Maps ↗</a></div>
       </div>
     </div>
-    <div class="map-card" aria-label="Vista ilustrativa de ubicaciones"><div class="map-label"><b>📍 Parada 1</b><small>Añade aquí la dirección real</small></div><div class="map-label" style="margin-left:24%"><b>📍 Parada 2</b><small>Añade aquí la dirección real</small></div><div class="map-label" style="margin-left:8%"><b>📍 Parada 3</b><small>Añade aquí la dirección real</small></div></div>
+    <div class="map-card" aria-label="Vista ilustrativa de ubicaciones"><div class="map-label"><b>📍 Parada 1</b><small>Añade aquí la dirección real</small></div><div class="map-label" style="margin-left:24%"><b>📍 Parada 2</b><small>Añade aquí la dirección real</small></div><div class="map-label" style="margin-left:12%"><b>📍 Parada 3</b><small>Añade aquí la dirección real</small></div><div class="map-label"><b>📍 Parada 1</b><small>Añade aquí la dirección real</small></div></div>
   </div>
 </section>
 <section id="contacto">
   <div class="wrap contact-grid">
-    <div><h2 class="section-title" data-i18n="contactTitle">Encuentra tu estilo</h2><div class="rule" style="margin-left:0"></div><p class="subtle" data-i18n="contactIntro">¿Tienes alguna duda sobre tallas, disponibilidad o pedidos? Escríbenos, estaremos encantados de ayudarte.</p>
+    <div><h2 class="section-title" data-i18n="contactTitle">Encuentra tu estilo</h2><div class="rule" style="margin-left:0"></div><p class="subtle" data-i18n="contactIntro">¿Tienes alguna duda sobre tallas o disponibilidad? Escríbenos, estaremos encantados de ayudarte.</p>
       <div class="contact-details">
-        <div class="detail"><span class="icon">☎</span><div><b data-i18n="phone">Teléfono</b><small><a href="tel:+34000000000">[Añadir número de contacto]</a></small></div></div>
-        <div class="detail"><span class="icon">✉</span><div><b data-i18n="email">Correo electrónico</b><small><a href="mailto:hola@morflor.example">[Añadir correo de contacto]</a></small></div></div>
+        <div class="detail"><span class="icon">☎</span><div><b data-i18n="phone">Teléfono</b><small><a href="tel:+34600806966">600 80 69 66</a></small></div></div>
+        <div class="detail"><span class="icon">✉</span><div><b data-i18n="email">Correo electrónico</b><small><a href="mailto:hola@morflor.example">email</a></small></div></div>
       </div>
     </div>
     <form id="contactForm"><h3 data-i18n="sendMessage">Envíanos un mensaje</h3>
@@ -64,12 +88,11 @@ section{padding:60px 0}.section-head{text-align:center;margin-bottom:28px}.secti
       <input id="subject" name="subject" placeholder="Asunto (opcional)" data-i18n-placeholder="subjectPlaceholder">
       <textarea id="message" name="message" placeholder="Cuéntanos qué necesitas..." data-i18n-placeholder="messagePlaceholder" required></textarea>
       <button class="btn" type="submit"><span data-i18n="prepareEmail">Preparar mensaje por correo</span> →</button>
-      <p class="form-note" data-i18n="formNote">El botón abrirá tu aplicación de correo con el mensaje preparado. Sustituye el correo de ejemplo por el correo real de Morflor.</p>
     </form>
   </div>
 </section>
 </main>
-<footer><div class="wrap foot"><div><a class="brand" href="#inicio"><span>❧</span> Morflor</a><br><small data-i18n="tagline">Ropa que te acompaña.</small></div><nav><a href="#inicio" data-i18n="navHome">Inicio</a>　<a href="#tienda" data-i18n="navShop">Tienda</a>　<a href="#paradas" data-i18n="footerLocations">Ubicaciones</a>　<a href="#contacto" data-i18n="navContact">Contacto</a></nav><small>© <span id="year"></span> Morflor</small></div></footer>
+<footer><div class="wrap foot"><div><a class="brand" href="#inicio"><span></span> Morflor</a><br><small data-i18n="tagline">Ropa que te acompaña.</small></div><nav><a href="#inicio" data-i18n="navHome">Inicio</a>　<a href="#tienda" data-i18n="navShop">Tienda</a>　<a href="#paradas" data-i18n="footerLocations">Ubicaciones</a>　<a href="#contacto" data-i18n="navContact">Contacto</a></nav><small>© <span id="year"></span> Morflor</small></div></footer>
 <div class="toast" id="toast" role="status"></div>
 <script>
 const translations = {
@@ -79,7 +102,7 @@ const translations = {
   seasonCatalog:"Catálogo de temporada",catalogText:"Descubre prendas esenciales para cada momento.",
   stopsTitle:"Horario y paradas",stopsIntro:"Consulta dónde estaremos y ven a descubrir tu próxima prenda favorita.",
   openingHours:"Horario de atención",hoursPlaceholder:"Lunes a sábado: [añadir horario]<br>Domingo: [añadir horario o cerrado]",
-  ourStops:"Nuestras paradas",contactTitle:"Encuentra tu estilo",contactIntro:"¿Tienes alguna duda sobre tallas, disponibilidad o pedidos? Escríbenos, estaremos encantados de ayudarte.",
+  ourStops:"Nuestras paradas",contactTitle:"Encuentra tu estilo",contactIntro:"¿Tienes alguna duda sobre tallas o disponibilidad? Escríbenos, estaremos encantados de ayudarte.",
   phone:"Teléfono",email:"Correo electrónico",sendMessage:"Envíanos un mensaje",namePlaceholder:"Nombre completo",emailPlaceholder:"Correo electrónico",
   subjectPlaceholder:"Asunto (opcional)",messagePlaceholder:"Cuéntanos qué necesitas...",prepareEmail:"Preparar mensaje por correo",
   formNote:"El botón abrirá tu aplicación de correo con el mensaje preparado. Sustituye el correo de ejemplo por el correo real de Morflor.",
@@ -94,7 +117,7 @@ const translations = {
   seasonCatalog:"Catàleg de temporada",catalogText:"Descobreix peces essencials per a cada moment.",
   stopsTitle:"Horaris i parades",stopsIntro:"Consulta on serem i vine a descobrir la teva pròxima peça preferida.",
   openingHours:"Horari d'atenció",hoursPlaceholder:"De dilluns a dissabte: [afegeix l'horari]<br>Diumenge: [afegeix l'horari o tancat]",
-  ourStops:"Les nostres parades",contactTitle:"Troba el teu estil",contactIntro:"Tens dubtes sobre talles, disponibilitat o comandes? Escriu-nos, estarem encantats d'ajudar-te.",
+  ourStops:"Les nostres parades",contactTitle:"Troba el teu estil",contactIntro:"Tens dubtes sobre talles o disponibilitat? Escriu-nos, estarem encantats d'ajudar-te.",
   phone:"Telèfon",email:"Correu electrònic",sendMessage:"Envia'ns un missatge",namePlaceholder:"Nom complet",emailPlaceholder:"Correu electrònic",
   subjectPlaceholder:"Assumpte (opcional)",messagePlaceholder:"Explica'ns què necessites...",prepareEmail:"Preparar missatge per correu",
   formNote:"El botó obrirà la teva aplicació de correu amb el missatge preparat. Canvia el correu d'exemple pel correu real de Morflor.",
@@ -109,7 +132,7 @@ const translations = {
   seasonCatalog:"Seasonal collection",catalogText:"Discover wardrobe essentials for every occasion.",
   stopsTitle:"Hours & locations",stopsIntro:"See where we'll be and stop by to discover your next favourite piece.",
   openingHours:"Opening hours",hoursPlaceholder:"Monday to Saturday: [add hours]<br>Sunday: [add hours or closed]",
-  ourStops:"Our stops",contactTitle:"Find your style",contactIntro:"Questions about sizes, availability or orders? Send us a message — we're happy to help.",
+  ourStops:"Our stops",contactTitle:"Find your style",contactIntro:"Questions about sizes or availability? Send us a message — we're happy to help.",
   phone:"Phone",email:"Email",sendMessage:"Send us a message",namePlaceholder:"Full name",emailPlaceholder:"Email address",
   subjectPlaceholder:"Subject (optional)",messagePlaceholder:"Tell us what you need...",prepareEmail:"Prepare email",
   formNote:"This button opens your email app with the message prepared. Replace the example email with Morflor's real email address.",
